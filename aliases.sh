@@ -12,9 +12,9 @@ function g {
 function e {
     if [[ $# > 0 ]]
     then
-        emacsclient -t $@
+        emacsclient -a '' -t $@
     else
-        emacsclient -t .
+        emacsclient -a '' -t .
     fi
 }
 
