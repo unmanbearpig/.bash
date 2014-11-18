@@ -1,4 +1,4 @@
-
+# git
 function g {
     if [[ $# > 0 ]]
     then
@@ -8,7 +8,7 @@ function g {
     fi
 }
 
-
+# emacs
 function e {
     if [[ $# > 0 ]]
     then
@@ -18,6 +18,7 @@ function e {
     fi
 }
 
+# tmux
 function t {
     if [[ $# == 0 ]]; then
         SESSION_NAME=`basename $PWD`
@@ -35,4 +36,10 @@ function t {
     else
         tmux new-session -A -s $SESSION_NAME
     fi
+}
+
+# mkdir with subdirs and go there
+function md {
+    mkdir -p $@
+    cd $@
 }
