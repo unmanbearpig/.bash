@@ -8,6 +8,9 @@ export CLICOLOR=1
 export PATH=/usr/local/bin:$PATH
 export EDITOR="emacsclient -t -a ''"
 
+export HISTSIZE=2000
+export HISTFILESIZE=2000
+
 source "$HOME/.bashrc"
 source "$HOME/.bash/apps.sh"
 source "$HOME/.bash/aliases.sh"
