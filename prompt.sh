@@ -7,6 +7,7 @@ set_prompt () {
     Reset='\[\e[00m\]'
     FancyX='\342\234\227'
     Checkmark='\342\234\223'
+    Arrow=$'\xE2\x96\xB8'
 
     if [[ $Last_Code == 0 ]]; then
         Last_Command_Result="$Green$Last_Code$Reset"
@@ -16,7 +17,7 @@ set_prompt () {
 
     PROMPT_DIRTRIM=2
 
-    PS1="$Last_Command_Result $White\w$Reset \$ $White"
+    PS1="$White$Arrow $Last_Command_Result $White\w$Reset \$ $White"
 }
 
 PROMPT_COMMAND='set_prompt'
