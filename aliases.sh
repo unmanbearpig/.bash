@@ -31,12 +31,8 @@ function t {
     fi
 
     if [[ $TMUX ]]; then
-        tmux switch-client -t $1
+        tmux switch-client -t $SESSION_NAME
     else
-        if tmux has-session -t $SESSION_NAME 2>/dev/null; then
-            tmux attach -t $SESSION_NAME
-        else
-            tmux new-session -s $SESSION_NAME
-        fi
+        tmux new-session -A -s $SESSION_NAME
     fi
 }
