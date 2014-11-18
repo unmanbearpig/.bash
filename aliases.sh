@@ -1,3 +1,9 @@
+# cd
+function cd {
+    builtin cd $@
+    ls
+}
+
 # git
 function g {
     if [[ $# > 0 ]]
