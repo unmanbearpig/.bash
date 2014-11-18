@@ -17,7 +17,7 @@ set_prompt () {
 
     PROMPT_DIRTRIM=2
 
-    PS1="$Last_Command_Result $White$Arrow$Reset\! $White\w$Reset \$ $White"
+    PS1="$Last_Command_Result $White$Arrow$Reset \! $White\w$Reset \$ $White"
 }
 
 PROMPT_COMMAND='set_prompt'
