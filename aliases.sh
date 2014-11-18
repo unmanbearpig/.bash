@@ -4,6 +4,11 @@ function cd {
     ls
 }
 
+# ls
+function l {
+    ls -lh $@
+}
+
 # git
 function g {
     if [[ $# > 0 ]]
