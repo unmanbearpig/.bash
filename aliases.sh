@@ -34,6 +34,15 @@ function p8 {
     ping 8.8.8.8
 }
 
+# ps ax | ag something
+function psax {
+    ps ax | ag $@
+}
+
+function psaux {
+    ps aux | ag $@
+}
+
 # tmux
 function t {
     if [[ $# == 0 ]]; then
