@@ -29,6 +29,11 @@ function e {
     fi
 }
 
+# ping
+function p8 {
+    ping 8.8.8.8
+}
+
 # tmux
 function t {
     if [[ $# == 0 ]]; then
