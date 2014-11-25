@@ -1,12 +1,14 @@
 # cd
 function cd {
     builtin cd $@
-    ls
+    l
 }
 
 # ls
 function l {
-    ls -lh $@
+    pwd
+    echo ---
+    ls $@
 }
 
 # git
