@@ -1,6 +1,10 @@
 set_prompt () {
     Last_Code=$? # Must come first!
+    Dark='\[\e[30m\]'
+    Yellow='\[\e[01;33m\]'
     Blue='\[\e[01;34m\]'
+    Purple='\[\e[01;35m\]'
+    Grey='\[\e[01;36m\]'
     White='\[\e[01;37m\]'
     Red='\[\e[01;31m\]'
     Green='\[\e[01;32m\]'
