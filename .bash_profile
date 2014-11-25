@@ -27,6 +27,5 @@ fi
 
 source ~/.bash/completions/git-completion.bash
 
-echo ---
-ls
+l
 echo ---
