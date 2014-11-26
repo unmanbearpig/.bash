@@ -70,3 +70,5 @@ function md {
     mkdir -p $@
     cd $@
 }
+
+alias bnudle=bundle
