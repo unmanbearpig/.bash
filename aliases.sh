@@ -31,7 +31,7 @@ function e {
     fi
 }
 
-# ping
+# ping 8.8.8.8
 function p8 {
     ping 8.8.8.8
 }
@@ -74,3 +74,11 @@ function md {
 alias bnudle=bundle
 alias bundel=bundle
 alias bnudel=bundle
+
+function rt {
+    if [[ $# == 0 ]]; then
+        bundle exec rake test
+    elif [[ $# == 1 ]]; then
+        bundle exec rake test TEST=$1
+    fi
+}
