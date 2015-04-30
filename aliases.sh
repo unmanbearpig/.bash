@@ -1,6 +1,6 @@
 # cd
 function cd {
-    builtin cd $@
+    builtin cd "$@"
     l
 }
 
@@ -8,7 +8,13 @@ function cd {
 function l {
     pwd
     echo ---
-    ls $@
+    CLICOLOR_FORCE=true ls -tch -- $@
+}
+
+function ll {
+    pwd
+    echo ---
+    CLICOLOR_FORCE=true ls -ltch -- $@
 }
 
 # git
@@ -45,25 +51,6 @@ function psaux {
     ps aux | ag $@
 }
 
-# tmux
-function t {
-    if [[ $# == 0 ]]; then
-        SESSION_NAME=`basename $PWD`
-    elif [[ $# == 1 ]]; then
-        if [[ -d $1 ]]; then
-            cd $1
-            SESSION_NAME=`basename $PWD`
-        else
-            SESSION_NAME=$1
-        fi
-    fi
-
-    if [[ $TMUX ]]; then
-        tmux switch-client -t $SESSION_NAME
-    else
-        tmux new-session -A -s $SESSION_NAME
-    fi
-}
 
 # mkdir with subdirs and go there
 function md {
@@ -77,8 +64,10 @@ alias bnudel=bundle
 
 function rt {
     if [[ $# == 0 ]]; then
-        bundle exec rake test
-    elif [[ $# == 1 ]]; then
-        bundle exec rake test TEST=$1
+        time bundle exec rake test
+    else
+        time bundle exec rake test TEST=$@
     fi
 }
+
+alias sr="spring rake test"
