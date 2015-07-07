@@ -16,6 +16,7 @@ source "$HOME/.bash/apps.sh"
 source "$HOME/.bash/aliases.sh"
 source "$HOME/.bash/prompt.sh"
 source "$HOME/.bash/tmux.sh"
+source "$HOME/.bash/rails.sh"
 
 if [[ -f "$HOME/.bash/secrets.sh" ]]; then
     source "$HOME/.bash/secrets.sh"
