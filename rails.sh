@@ -10,5 +10,5 @@ function rt {
     fi
 }
 
-alias sr="spring rake test"
+alias sr="spring rspec"
 alias te="t && e"
