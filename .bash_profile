@@ -11,7 +11,7 @@ export EDITOR="emacsclient -t -a ''"
 export HISTSIZE=2000
 export HISTFILESIZE=2000
 
-export CDPATH=~/projects:$CDPATH
+export CDPATH=~;~/projects:$CDPATH
 
 source "$HOME/.bashrc"
 source "$HOME/.bash/apps.sh"
