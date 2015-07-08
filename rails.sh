@@ -13,6 +13,8 @@ function rt {
 alias sr="spring rspec"
 alias te="t && e"
 
+alias r="rails"
+
 export RAILS_TEMPLATE="~/projects/rails/rails_templates/unmbp.rb"
 
 function rnew {
