@@ -57,3 +57,6 @@ function md {
     mkdir -p $@
     cd $@
 }
+
+alias migrate="rake db:migrate db:test:prepare"
+alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
