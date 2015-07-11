@@ -23,7 +23,7 @@ function t {
         fi
     fi
 
-    session_name=_clean_up_session_name $session_name
+    session_name=`_clean_up_session_name "$session_name"`
 
     _open_tmux $session_name
 }
