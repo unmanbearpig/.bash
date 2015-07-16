@@ -25,7 +25,7 @@ if [[ -f "$HOME/.bash/secrets.sh" ]]; then
 fi
 
 # bash completion
-if [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
+if command -v brew >/dev/null && [ -f $(brew --prefix)/share/bash-completion/bash_completion ]; then
     . $(brew --prefix)/share/bash-completion/bash_completion
 fi
 
