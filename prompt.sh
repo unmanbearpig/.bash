@@ -19,7 +19,7 @@ set_prompt () {
         Last_Command_Result="$Red$Last_Code$Reset"
     fi
 
-    PS1="$Last_Command_Result $White$Arrow$Grey \! $Purple\W$Reset $White"
+    PS1="$Last_Command_Result $White$Arrow $Purple\W$Reset $White"
 }
 
 PROMPT_COMMAND='set_prompt'
