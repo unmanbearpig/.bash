@@ -2,6 +2,8 @@ alias bnudle=bundle
 alias bundel=bundle
 alias bnudel=bundle
 
+alias rpsec=rspec
+
 function rt {
     if [[ $# == 0 ]]; then
         time bundle exec rake test
