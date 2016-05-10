@@ -6,6 +6,7 @@ export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 export CLICOLOR=1
 
 export PATH=/usr/local/bin:$PATH
+export PATH=~/.bash/bin:$PATH
 export EDITOR="emacsclient -t -a ''"
 
 export HISTSIZE=2000
