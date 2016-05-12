@@ -5,6 +5,7 @@ export LC_ALL=$LANG
 export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 export CLICOLOR=1
 
+export PATH=~/.bash/gary-bernhardt/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=~/.bash/bin:$PATH
 export EDITOR="emacsclient -t -a ''"

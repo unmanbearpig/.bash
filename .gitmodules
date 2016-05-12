@@ -1,0 +1,3 @@
+[submodule "gary-bernhardt-dotfiles"]
+	path = gary-bernhardt
+	url = https://github.com/garybernhardt/dotfiles
