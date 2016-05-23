@@ -2,7 +2,6 @@ export LANG="en_US.UTF-8"
 export LANGUAGE=$LANG
 export LC_ALL=$LANG
 
-export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 export CLICOLOR=1
 
 export PATH=~/.bash/gary-bernhardt/bin:$PATH
