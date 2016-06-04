@@ -62,3 +62,13 @@ alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias pk="pkill"
 alias la="ls -a"
+alias list_projects="ls -d ~/projects/stuff/*/ ~/projects/work/*/*/"
+
+# cd into project
+cdp() {
+    if [[ $# -gt 0 ]]; then
+        cd "$(list_projects | fzf -1 -e -q $@)"
+    else
+        cd "$(list_projects | fzf -e)"
+    fi
+}
