@@ -29,3 +29,21 @@ function rnew {
     rails new $project_name --template=$RAILS_TEMPLATE --skip-test-unit
     cd $project_name
 }
+
+_capybara_last_html_screenshot() {
+    echo "./tmp/capybara/`ls -tc tmp/capybara/ | grep .html | head -n1`"
+}
+
+_capybara_last_html_screenshot_in_ascii() {
+    links -source "$(_capybara_last_html_screenshot)"
+}
+
+capybara_last_error() {
+    if [ -t 1 ]; then
+        _capybara_last_html_screenshot_in_ascii | head -n35
+    else
+        _capybara_last_html_screenshot_in_ascii
+    fi
+}
+
+alias capyerr=capybara_last_error
