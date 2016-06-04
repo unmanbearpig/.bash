@@ -28,4 +28,12 @@ function t {
     _open_tmux $session_name
 }
 
+function _tmux_pick_session {
+    tmux list-sessions | sed -E 's/:.*$//' | grep -v \"^$(tmux display-message -p '#S')\$\" | fzf --reverse
+}
+
+function ts {
+    tmux attach -t `_tmux_pick_session`
+}
+
 alias ta="tmux attach"
