@@ -46,4 +46,12 @@ capybara_last_error() {
     fi
 }
 
+routes() {
+    if [[ $# == 0 ]]; then
+        spring rake routes | awk '{ print $1 " " $3 " " $4 }' | grep -v -E '[A-Z]+' | column -t
+    else
+        spring rake routes | ag $@ | awk '{ print $1 " " $3 " " $4 }' | grep -v -E '[A-Z]+' | column -t
+    fi
+}
+
 alias capyerr=capybara_last_error
