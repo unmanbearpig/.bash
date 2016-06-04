@@ -72,3 +72,7 @@ cdp() {
         cd "$(list_projects | fzf -e)"
     fi
 }
+
+watchfs() {
+    watchmedo shell-command --ignore-directories --recursive --command="$1" .
+}
