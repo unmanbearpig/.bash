@@ -55,3 +55,4 @@ routes() {
 }
 
 alias capyerr=capybara_last_error
+alias rc="spring rails c"
