@@ -10,6 +10,9 @@ export PATH=~/.bash/bin:$PATH
 export PATH=~/.gohome/bin:$PATH
 export EDITOR="emacsclient -t -a ''"
 
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=' -R '
+
 export HISTSIZE=2000
 export HISTFILESIZE=2000
 
