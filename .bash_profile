@@ -7,6 +7,7 @@ export CLICOLOR=1
 export PATH=~/.bash/gary-bernhardt/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH=~/.bash/bin:$PATH
+export PATH=~/.gohome/bin:$PATH
 export EDITOR="emacsclient -t -a ''"
 
 export HISTSIZE=2000
