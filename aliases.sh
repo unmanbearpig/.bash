@@ -58,6 +58,20 @@ function md {
     cd $@
 }
 
+char_stats() {
+    path=.
+    if [[ $# > 0 ]]; then
+        path="$1"
+    fi
+
+    pattern='*.rb'
+    if [[ $# > 1 ]]; then
+        pattern="$2"
+    fi
+
+    find "$path" -name "$pattern" | xargs cat | fold -w1 | gsort --parallel=8 | uniq -c | gsort -n --parallel=8
+}
+
 alias migrate="rake db:migrate db:test:prepare"
 alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
 alias pk="pkill"
