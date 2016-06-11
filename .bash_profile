@@ -4,11 +4,11 @@ export LC_ALL=$LANG
 
 export CLICOLOR=1
 
-export PATH=~/.cargo/bin:$PATH
-export PATH=~/.bash/gary-bernhardt/bin:$PATH
-export PATH=/usr/local/bin:$PATH
-export PATH=~/.bash/bin:$PATH
-export PATH=~/.gohome/bin:$PATH
+export PATH=$PATH:~/.cargo/bin
+export PATH=$PATH:~/.bash/gary-bernhardt/bin
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:~/.bash/bin
+export PATH=$PATH:~/.gohome/bin
 export EDITOR="emacsclient -t -a ''"
 
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
