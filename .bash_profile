@@ -4,6 +4,7 @@ export LC_ALL=$LANG
 
 export CLICOLOR=1
 
+export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:~/.bash/gary-bernhardt/bin
 export PATH=$PATH:/usr/local/bin
