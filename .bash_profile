@@ -15,8 +15,8 @@ export EDITOR="emacsclient -t -a ''"
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
-export HISTSIZE=2000
-export HISTFILESIZE=2000
+export HISTSIZE=4000
+export HISTFILESIZE=4000
 
 export CDPATH=~/projects:$CDPATH
 
