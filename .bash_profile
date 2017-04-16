@@ -15,6 +15,7 @@ export EDITOR="emacsclient -t -a ''"
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
+shopt -s histappend
 export HISTSIZE=4000
 export HISTFILESIZE=4000
 export HISTCONTROL=ignoredups:erasedups:ignorespace
