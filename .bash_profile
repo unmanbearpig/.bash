@@ -17,6 +17,7 @@ export LESS=' -R '
 
 export HISTSIZE=4000
 export HISTFILESIZE=4000
+export HISTCONTROL=ignoredups:erasedups:ignorespace
 
 export CDPATH=~/projects:$CDPATH
 
