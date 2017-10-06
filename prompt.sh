@@ -1,3 +1,15 @@
+is_laptop () {
+    if [ $(uname) != Linux ]; then
+        return 0;
+    fi
+
+    if [ $(hostname) = lionus ]; then
+        return 0;
+    fi
+
+    return 1;
+}
+
 set_prompt () {
     Last_Code=$? # Must come first!
     Dark='\[\e[30m\]'
@@ -19,7 +31,12 @@ set_prompt () {
         Last_Command_Result="$Red$Last_Code$Reset"
     fi
 
-    PS1="$Last_Command_Result $White$Arrow $Purple\W$Reset $White"
+    Hostname=''
+    if ! is_laptop; then
+        Hostname="@$(hostname) "
+    fi
+
+    PS1="$Last_Command_Result $Hostname$White$Arrow $Purple\W$Reset $White"
 }
 
 PROMPT_COMMAND='set_prompt'
