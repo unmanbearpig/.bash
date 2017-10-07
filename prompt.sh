@@ -1,9 +1,5 @@
-is_laptop () {
-    if [ $(uname) != Linux ]; then
-        return 0;
-    fi
-
-    if [ $(hostname) = lionus ]; then
+is_remote () {
+    if [ "$SSH_CONNECTION" ]; then
         return 0;
     fi
 
@@ -32,7 +28,7 @@ set_prompt () {
     fi
 
     Hostname=''
-    if ! is_laptop; then
+    if is_remote; then
         Hostname="@$(hostname) "
     fi
 
