@@ -20,8 +20,6 @@ export HISTSIZE=4000
 export HISTFILESIZE=4000
 export HISTCONTROL=ignoredups:erasedups:ignorespace
 
-export CDPATH=~/projects:$CDPATH
-
 source "$HOME/.bashrc"
 source "$HOME/.bash/apps.sh"
 source "$HOME/.bash/aliases.sh"
