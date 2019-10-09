@@ -1,0 +1,30 @@
+#!/bin/bash
+
+set -e
+
+# jq -r  '.title + " " + "https://www.youtube.com/watch?v=" + .url
+
+short_template='.title + " : " + "https://www.youtube.com/watch?v=" + .url'
+long_template='"https://www.youtube.com/watch?v=" + .url + "\n" + .title + "\n"'
+
+if [[ '-l' == $1 ]]; then
+    query=$2
+    template=$long_template
+elif [[ '--help' == $1 ]]; then
+    echo "\
+yt-list [-l] [--help] PLAYLIST_URL
+        Prints titles and URLs of youtube-dl compatible playlists
+
+PLAYLIST_URL: youtube-dl compatible URL
+              Can be a playlist url, search query, search url, etc.
+
+no arguments - Short output: title : URL
+          -l - Long output: URL \n Title \n
+      --help - This help"
+    exit 0
+else
+    query=$1
+    template=$short_template
+fi
+
+youtube-dl --flat-playlist -j $query | jq -r "$template"
