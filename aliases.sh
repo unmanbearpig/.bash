@@ -9,6 +9,8 @@ function repoclone() {
 
   # Remove .git extension, if present
   url=${url%.git}
+  # remove the slash at the end
+  url=${url%/}
 
   # Extract the username and repository name from the URL
   if [[ $url == *"github.com"* ]]; then
